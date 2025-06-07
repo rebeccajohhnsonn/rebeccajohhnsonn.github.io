@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Tasks For Today</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tasks For Today with Wellness Suggestions</h1>
+      
+      <div class="app-description">
+        <p>This app helps you organize tasks that need to be completed today. Add your tasks with a priority number (1-5, where 1 is highest priority). Tasks will be automatically sorted by priority.</p>
+        <p>Use the "Random Task" button for health and wellness suggestions to take care of yourself throughout your day!</p>
+      </div>
+      
+      <div class="input-container">
+        <div class="input-group">
+          <input type="text" id="task-input" placeholder="Enter a wellness task...">
+          <select id="priority-input">
+            <option value="1">Priority 1</option>
+            <option value="2">Priority 2</option>
+            <option value="3" selected>Priority 3</option>
+            <option value="4">Priority 4</option>
+            <option value="5">Priority 5</option>
+          </select>
+        </div>
+        <div class="button-group">
+          <button id="add-button" onclick="addTask()">Add Task</button>
+          <button id="clear-input-button" onclick="clearInput()">Clear Input</button>
+          <button id="random-task-button" onclick="addRandomTask()">Random Task</button>
+        </div>
+      </div>
+      <div class="tasks-container">
+        <h2>Your Tasks <button id="clear-tasks-button" onclick="clearTasks()">Clear All Tasks</button></h2>
+        <ul id="task-list" class="task-list"></ul>
+      </div>
+    </div>
+
+    <script src="tasklist-starter.js"></script>
+  </body>
+</html>

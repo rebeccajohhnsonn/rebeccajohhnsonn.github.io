@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATO Phonetic Alphabet Converter</title>
+    <link rel="stylesheet" href="nato-converter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NATO Phonetic Alphabet Converter</h1>
+        
+        <div class="app-description">
+            <p>This converter helps you translate text into the NATO phonetic alphabet. Simply enter your text in the input field and click the "Convert" button to see the NATO phonetic equivalent.</p>
+            <p>The NATO phonetic alphabet is used internationally to ensure clear communication, especially in radio transmissions and telecommunications.</p>
+        </div>
+        
+        <div class="input-group">
+            <input type="text" id="inputString" placeholder="Enter text to convert">
+        </div>
+        
+        <div class="button-group">
+            <button id="verbalize" onclick="verbalize()">Convert</button>
+            <button id="randomWord" onclick="generateRandomWord()">Random Word</button>
+            <button id="clearNATO" onclick="clearNATOInputs()">Clear</button>
+        </div>
+        
+        <div class="result-group">
+            <h2>NATO Result:</h2>
+            <div id="natoResult"></div>
+        </div>
+    </div>
+
+    <script src="nato-converter-starter.js"></script>
+</body>
+</html>

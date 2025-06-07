@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts Management App</title>
+    <link rel="stylesheet" href="contacts-app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contacts Management App</h1>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('view')">View Contacts</div>
+            <div class="tab" onclick="switchTab('add')">Add Contact</div>
+            <div class="tab" onclick="switchTab('json')">JSON Data</div>
+        </div>
+        
+        <div id="view-contacts" class="tab-content active">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search contacts...">
+                <button onclick="searchContacts()">Search</button>
+                <button onclick="resetSearch()">Reset</button>
+            </div>
+            
+            <div id="contacts-list" class="contacts-list">
+                <!-- Contacts will be displayed here -->
+            </div>
+        </div>
+        
+        <div id="add-contact" class="tab-content">
+            <h2>Add New Contact</h2>
+            <form id="contact-form" onsubmit="return addContact()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="type">Contact Type:</label>
+                    <select id="type">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="family">Family</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Add Contact</button>
+            </form>
+        </div>
+        
+        <div id="json-view" class="tab-content">
+            <h2>JSON Data</h2>
+            <div class="json-display" id="json-content"></div>
+        </div>
+    </div>
+
+    <script src="contacts-app.js"></script>
+</body>
+</html>

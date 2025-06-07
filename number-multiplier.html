@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Number Multiplier</title>
+        <link rel="stylesheet" href="number-muliplier.css">
+    </head>
+    <body>
+        <h1>Number Multiplier</h1>
+        
+        <div class="container">
+            <div class="converter-section">
+                <p>Enter a number and select an operation to multiply it.</p>
+                
+                <div class="input-group">
+                    <label for="inputNumber">Enter your number:</label>
+                    <!-- the number input field -->
+                    <input type="number" id="inputNumber" placeholder="Enter a number">
+                    <!-- the selection field with two options -->
+                    <select id="operation" onchange="displaySelection()">
+                        <option value="double">double</option>
+                        <option value="triple">triple</option>
+                        <option value="quadruple">quadruple</option>
+                        <option value="half">half</option>
+                    </select>
+                </div>
+                
+                <div id="selection-display" class="display-area">
+                    <!-- Selection will be displayed here -->
+                     double
+                </div>
+                
+                <div>
+                    <!-- appropriate functions are called onclick -->
+                    <button onclick="calculateResult()">Calculate</button>
+                    <button onclick="clearResult()" class="clear">Clear</button>
+                </div>
+                
+                <div id="calculation-result" class="display-area result">
+                    <!-- Calculation result will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- script in an external js file -->
+        <script src="number-multiplier.js"></script>
+    </body>
+</html>
